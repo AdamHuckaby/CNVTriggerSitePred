@@ -1,5 +1,14 @@
 CNVTriggerSitePred is a suite of scripts that is intended to take a fasta file and identify all possible regions of the genome that DNA hairpins are likely to form and cause CNV trigger sites when near long mononucleotide A/T tracks.
 
+Future versions to do list:
+1)  Fix the edge case error for hairpin minima collapsing
+2)  Get Phobos working on command line for autogeneration of repeats from .fasta file
+3)  Full automation with command line input for options
+4)  Better parallelization using gnu parallel or similar
+5)  Creation of a docker/kubernetes/container system for ease of use
+6)  Add other option to extract other features such as gene locations
+7)  Option to extraction breakpoints from vcf files to compare to features
+8)  Deep neural network to predict features that explain known breakpoints
 
 #######TABLE OF CONTENTS#######
 1.  AVAILABILITY AND MAINTENANCE
@@ -41,39 +50,45 @@ Has only been tested on Ubuntu 18.04 but should work with the following dependen
 
 #######INSTALLATION#######
 
-1)  Check python version
+#Download CNVTriggerPred from github and add permissions to scripts
+git clone https://github.com/AdamHuckaby/CNVTriggerSitePred.git
+sudo chmod +x /CNVTriggerSitePred
 
-2)  Install R. Ubuntu 18.04 default is R version 3.4.4 (2018-03-15) -- "Someone to Lean On"
+#Check python version. If python3 is installed nothing needs to be done. If python 2.x is installed, the SecPred_full_generic script needs to be modified: change all instances of "python3" to "python"
+python --version
+
+#Install R. Ubuntu 18.04 default is R version 3.4.4 (2018-03-15) -- "Someone to Lean On"
     sudo apt-get update
     sudo apt-get install r-base r-base-dev
 
-3)  Install EMBOSS software package. Check it is correctly installed by running shuffleseq
+#Install EMBOSS software package. Check it is correctly installed by running shuffleseq
     sudo apt-get install emboss
     shuffleseq
 
-4)  Install Vienna RNAfold using pre-compiled binary for Ubuntu 18.04 from https://www.tbi.univie.ac.at/RNA/# or github
+#Install Vienna RNAfold using pre-compiled binary for Ubuntu 18.04 from https://www.tbi.univie.ac.at/RNA/# or github
 
-5)  Download and install bedtools
+#Download and install bedtools
     sudo apt-get install bedtools
-
-6)  Set permissions for CNVTriggerSitePred
     
-7)  Optional: Install Rstudio for debugging
-    a. Download appropriate Rstudio deb from Rstudio website (bionic beaver 18.04)
+#Optional: Install Rstudio for debugging
+#Download appropriate Rstudio deb from Rstudio website (bionic beaver 18.04)
 
 
 -------
 
 #######USAGE#######
-1)  Place unpacked .fasta and .csv file in the primary folder along with the EDIT_AND_RUN_THIS.sh script.
+1)  Place unpacked .fasta and .csv file containing A/T tracks from Phobos in Geneious in the primary folder with the EDIT_AND_RUN_THIS.sh script.
 
-2)  Follow directions to edit the EDIT_AND_RUN_THIS.sh script.
+2)  Follow directions to edit the EDIT_AND_RUN_THIS.sh script, rename the edited script, and run it.
 
 3)  Check the folder that has been created in the CNVTriggerSitePred main directory with the associated filename. All .bed files should be in the main directory and all intermediate files and data_scripts should be in their respective folders.
 
 4)  Check that there is a .bed file of collapsed minima for each chromosome at the end and debug as necessary.
 
 5)  Using bedtools, explore .bed files/.gff for CNV trigger site distances, genes, and other associated features.
+
+Example commands:
+
 
 -------
 
