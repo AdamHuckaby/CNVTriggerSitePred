@@ -3,12 +3,14 @@ CNVTriggerSitePred is a suite of scripts that is intended to take a fasta file a
 Future versions to do list:
 1)  Fix the edge case error for hairpin minima collapsing
 2)  Get Phobos working on command line for autogeneration of repeats from .fasta file
-3)  Full automation with command line input for options
-4)  Better parallelization using gnu parallel or similar
-5)  Creation of a docker/kubernetes/container system for ease of use
-6)  Add other option to extract other features such as gene locations
-7)  Option to extraction breakpoints from vcf files to compare to features
-8)  Deep neural network to predict features that explain known breakpoints
+3)  Make genome independent (auto extract chromosome numbers/names) 
+4)  Add command line input for options
+5)  Better parallelization using gnu parallel or similar
+6)  Translate R scripts to python
+7)  Creation of a docker/kubernetes/container system for ease of use
+8)  Add other option to extract other features such as gene locations
+9)  Option to extraction breakpoints from vcf files to compare to features
+10)  Deep neural network to predict features that explain known breakpoints
 
 #######TABLE OF CONTENTS#######
 1.  AVAILABILITY AND MAINTENANCE
