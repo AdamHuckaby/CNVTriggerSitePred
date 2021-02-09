@@ -24,7 +24,10 @@ Future versions to do list:
 -------
 
 #######AVAILABILITY AND MAINTENANCE#######
-Will be available through download from Adam Huckaby's github with binaries/.deb files for Ubuntu 18.04 programs included in the bin. See contact if not working.
+Available through github: https://github.com/AdamHuckaby/CNVTriggerSitePred.git 
+Binaries/.deb files for Ubuntu 18.04 programs Phobos and Vienna RNAfold are zipped in the bin. See contact if not working.
+
+This program is not actively maintained and should be considered for use as is.
 
 -------
 
