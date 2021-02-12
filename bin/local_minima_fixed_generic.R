@@ -21,7 +21,6 @@ if (next_row == row + 1) {
     
 }
 }
-row_list = append(row_list,which(data$start == row_check))
 
 #returns minima, a data frame with the minima for a each feature
 minima = data.frame("cName","start","end","feature_name","deltaG","strand")
