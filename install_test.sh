@@ -6,8 +6,8 @@
 # Use find/replace for 50 to specify the folding window size
 # Use find/replace for 0.03 to specify the percentile 0.03 for shuffled data, needs to be less than 1. Example: 5% = "0.05"
 
-cp ./Example_files/PbANKA10k.fasta
-cp ./Example_files/PbANKA10k_MonoRepeats.csv
+cp ./Example_files/PbANKA10k.fasta .
+cp ./Example_files/PbANKA10k_MonoRepeats.csv .
 sed 's/rabble/PbANKA10k/g' < ./bin/SecPred_full_generic.sh|sed 's/rabbble/PbANKA/g'|sed 's/rabbbble/v3/g'|sed 's/rabbbbble/1000/g'|sed 's/rabbbbbble/50/g'|sed 's/rabbbbbbble/0.03/g' > SecPred_full_PbANKA10k.sh
 sudo chmod +x SecPred_full_PbANKA10k.sh
 ./SecPred_full_PbANKA10k.sh

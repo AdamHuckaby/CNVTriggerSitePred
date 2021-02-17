@@ -12,7 +12,7 @@ inputdata["V6"] <- NA
 inputdata["V5"] <- inputdata$V1
 
 #Give names of chromsomes
-inputdata["V1"] <- ("input_dataTYPE")
+inputdata["V1"] <- ("inputTYPE")
 
 #Give Start
 inputdata["V2"] <- 1:nrow(inputdata)
