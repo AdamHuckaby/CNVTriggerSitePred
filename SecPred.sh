@@ -8,9 +8,6 @@ TRIMMING=""			# SEQUENCE END TRIMMING LENGTH
 WINDOWSIZE=""		# FOLDING WINDOW SIZE
 SIGTHRESHOLD=""		# SIGNIFICANCE THRESHOLD
 
-cp ./Example_files/PbANKA10k.fasta .
-cp ./Example_files/PbANKA10k_MonoRepeats.csv .
-
 usage() {                                 # Function: Print a help message for correct usage.
   		echo ""
   		echo "Usage: $0 [ -f FASTA FILENAME ] [ -t SEQUENCE END TRIMMING LENGTH ] [ -w FOLDING WINDOW SIZE ] [ -s SIGNIFICANCE THRESHOLD, 0<s<1 ]" 1>&2
